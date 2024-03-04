@@ -66,11 +66,11 @@ class GameScene extends Phaser.Scene {
         //  The score
         this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
 
-        //  Collide the player and the coins with the platforms
+        //  colisao play x plataforma
         this.physics.add.collider(player, platforms);
         this.physics.add.collider(coins, platforms);
 
-        //  Checks to see if the player overlaps with any of the coins, if he does call the collectCoin function
+        // coleta de moedas
         this.physics.add.overlap(player, coins, this.collectCoin, null, this);
 
         // Adicionando as variáveis ao contexto da cena
